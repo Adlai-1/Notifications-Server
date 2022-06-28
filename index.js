@@ -3,6 +3,7 @@ import express from "express";
 import { ApolloServer, gql } from "apollo-server-express";
 import { getDatabase } from "firebase-admin/database";
 import { app } from "./FireBase.js";
+import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 
 let expo = new Expo({ accessToken: process.env.EXPO_ACCESS_TOKEN });
 
@@ -83,7 +84,12 @@ const resolvers = {
   },
 };
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  introspection: true,
+  plugins: [],
+});
 
 server.start().then(() => {
   const app = express();
