@@ -1,0 +1,19 @@
+{
+  "name": "ud-server",
+  "version": "1.0",
+  "description": "Server that handles all Expo Post-notifications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Adlai Nettey",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.8.2",
+    "expo-server-sdk": "^3.6.0",
+    "express": "^4.18.1",
+    "firebase-admin": "^10.3.0",
+    "graphql": "^16.5.0"
+  },
+  "type": "module"
+}
