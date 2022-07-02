@@ -73,7 +73,7 @@ const resolvers = {
           try {
             let ticketChunk = await expo.sendPushNotificationsAsync(chunk);
             //tickets.push(...ticketChunk);
-            console.log(ticketChunk);
+            //console.log(ticketChunk);
           } catch (error) {
             console.error(error);
           }
@@ -88,7 +88,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   introspection: true,
-  plugins: [],
+  plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
 });
 
 server.start().then(() => {
