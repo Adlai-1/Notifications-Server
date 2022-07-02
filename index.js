@@ -96,9 +96,7 @@ server.start().then(() => {
 
   server.applyMiddleware({ app });
 
-  const PORT = 4000 || process.env.PORT;
+  const PORT = process.env.PORT;
 
-  app.listen({ port: PORT }, () =>
-    console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
-  );
+  app.listen({ port: PORT }, () => console.log(`🚀 Server ready.`));
 });
