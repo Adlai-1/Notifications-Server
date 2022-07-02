@@ -88,6 +88,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   introspection: true,
+  persistedQueries: false,
   plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
 });
 
