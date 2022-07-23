@@ -13,7 +13,7 @@ let somePushTokens = [];
 
 //Retriving Expo Tokens from Firebase Database...
 (async () => {
-  db.ref("/Tokens").on(
+  db.ref("Your document name here.").on(
     "value",
     (data) => {
       Object.values(data.val()).forEach((token) => somePushTokens.push(token));
