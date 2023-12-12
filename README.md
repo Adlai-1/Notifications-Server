@@ -7,3 +7,6 @@ This Project can be used by anyone struggling to build a server that sends push 
 
 Personally I tried using Onesignal but the package for React-Native Expo doesn't work as its supposed to according to their documentation.
 Currently with FireBase Cloud Messaging the Expo team I believe are still working to provide a support for IOS client (It currently has support for only Android).
+
+# Tech Stack
+GraphQL, Javascript and Firebase
